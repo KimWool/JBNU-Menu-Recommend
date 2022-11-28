@@ -7,7 +7,7 @@
     tools:context=".SplashActivity">
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/splash_logo"
         android:layout_width="200dp"
         android:layout_height="200dp"
         android:layout_marginEnd="10dp"
@@ -17,7 +17,9 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/application_icon" />
+        app:srcCompat="@drawable/application_icon"
+        android:contentDescription="TODO"
+        tools:ignore="ContentDescription" />
 
     <TextView
         android:id="@+id/Main_Title"
