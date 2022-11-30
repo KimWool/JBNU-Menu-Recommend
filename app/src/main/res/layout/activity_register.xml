@@ -7,7 +7,7 @@
     tools:context=".RegisterActivity">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/Register"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="60dp"
@@ -18,7 +18,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/text_id"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
@@ -26,11 +26,11 @@
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintStart_toStartOf="@+id/register_id"
+        app:layout_constraintTop_toBottomOf="@+id/Register" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/text_password"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
@@ -38,11 +38,11 @@
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName2"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
+        app:layout_constraintStart_toStartOf="@+id/register_password"
+        app:layout_constraintTop_toBottomOf="@+id/register_id" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/text_password_check"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
@@ -50,11 +50,11 @@
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName3"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2" />
+        app:layout_constraintStart_toStartOf="@+id/register_password_check"
+        app:layout_constraintTop_toBottomOf="@+id/register_password" />
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/text_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
@@ -62,11 +62,11 @@
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName4"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName3" />
+        app:layout_constraintStart_toStartOf="@+id/register_name"
+        app:layout_constraintTop_toBottomOf="@+id/register_password_check" />
 
     <TextView
-        android:id="@+id/textView6"
+        android:id="@+id/text_department"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
@@ -74,11 +74,11 @@
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/multiAutoCompleteTextView"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName4" />
+        app:layout_constraintStart_toStartOf="@+id/register_department"
+        app:layout_constraintTop_toBottomOf="@+id/register_name" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/register_id"
         android:layout_width="270dp"
         android:layout_height="50dp"
         android:layout_marginTop="5dp"
@@ -87,12 +87,12 @@
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/text_id"
         android:autofillHints=""
         tools:ignore="LabelFor" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName2"
+        android:id="@+id/register_password"
         android:layout_width="270dp"
         android:layout_height="50dp"
         android:layout_marginTop="5dp"
@@ -101,12 +101,12 @@
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        app:layout_constraintTop_toBottomOf="@+id/text_password"
         android:autofillHints=""
-        tools:ignore="LabelFor" />
+        tools:ignore="LabelFor,TextFields" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName3"
+        android:id="@+id/register_password_check"
         android:layout_width="270dp"
         android:layout_height="50dp"
         android:layout_marginTop="5dp"
@@ -115,12 +115,12 @@
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4"
+        app:layout_constraintTop_toBottomOf="@+id/text_password_check"
         android:autofillHints=""
-        tools:ignore="LabelFor" />
+        tools:ignore="LabelFor,TextFields" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName4"
+        android:id="@+id/register_name"
         android:layout_width="270dp"
         android:layout_height="50dp"
         android:layout_marginTop="5dp"
@@ -129,23 +129,23 @@
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView5"
+        app:layout_constraintTop_toBottomOf="@+id/text_name"
         android:autofillHints=""
         tools:ignore="LabelFor" />
 
     <MultiAutoCompleteTextView
-        android:id="@+id/multiAutoCompleteTextView"
+        android:id="@+id/register_department"
         android:layout_width="270dp"
         android:layout_height="50dp"
         android:layout_marginTop="5dp"
         android:background="#EEEEEE"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView6"
+        app:layout_constraintTop_toBottomOf="@+id/text_department"
         tools:ignore="LabelFor" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/register_button"
         android:layout_width="270dp"
         android:layout_height="50dp"
         android:layout_marginTop="35dp"
@@ -154,6 +154,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/multiAutoCompleteTextView"
+        app:layout_constraintTop_toBottomOf="@+id/register_department"
         app:layout_constraintVertical_bias="0.0" />
 </androidx.constraintlayout.widget.ConstraintLayout>
