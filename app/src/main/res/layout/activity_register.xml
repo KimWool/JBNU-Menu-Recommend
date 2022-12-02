@@ -58,14 +58,14 @@
                 android:layout_width="270dp"
                 android:layout_height="50dp"
                 android:layout_marginTop="5dp"
-                android:autofillHints=""
                 android:background="#EEEEEE"
                 android:ems="10"
                 android:inputType="textPersonName"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/text_id"
-                tools:ignore="LabelFor" />
+                tools:ignore="LabelFor"
+                android:autofillHints="" />
 
             <TextView
                 android:id="@+id/text_password"
@@ -84,14 +84,14 @@
                 android:layout_width="270dp"
                 android:layout_height="50dp"
                 android:layout_marginTop="5dp"
-                android:autofillHints=""
                 android:background="#EEEEEE"
                 android:ems="10"
                 android:inputType="textPersonName"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/text_password"
-                tools:ignore="LabelFor,TextFields" />
+                tools:ignore="LabelFor,TextFields"
+                android:autofillHints="" />
 
             <TextView
                 android:id="@+id/text_password_check"
@@ -110,14 +110,14 @@
                 android:layout_width="270dp"
                 android:layout_height="50dp"
                 android:layout_marginTop="5dp"
-                android:autofillHints=""
                 android:background="#EEEEEE"
                 android:ems="10"
                 android:inputType="textPersonName"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/text_password_check"
-                tools:ignore="LabelFor,TextFields" />
+                tools:ignore="LabelFor,TextFields"
+                android:autofillHints="" />
 
             <TextView
                 android:id="@+id/text_name"
@@ -136,14 +136,14 @@
                 android:layout_width="270dp"
                 android:layout_height="50dp"
                 android:layout_marginTop="5dp"
-                android:autofillHints=""
                 android:background="#EEEEEE"
                 android:ems="10"
                 android:inputType="textPersonName"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/text_name"
-                tools:ignore="LabelFor" />
+                tools:ignore="LabelFor"
+                android:autofillHints="" />
 
             <TextView
                 android:id="@+id/text_department"
@@ -154,19 +154,20 @@
                 android:textSize="16sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="@+id/register_department"
+                app:layout_constraintStart_toStartOf="@+id/departmentSpinner"
                 app:layout_constraintTop_toBottomOf="@+id/register_name" />
 
-            <MultiAutoCompleteTextView
-                android:id="@+id/register_department"
+            <Spinner
+                android:id="@+id/departmentSpinner"
+                android:spinnerMode="dropdown"
                 android:layout_width="270dp"
                 android:layout_height="50dp"
                 android:layout_marginTop="5dp"
                 android:background="#EEEEEE"
+                android:ems="10"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/text_department"
-                tools:ignore="LabelFor" />
+                app:layout_constraintBottom_toBottomOf="@+id/text_department" />
 
         </LinearLayout>
     </ScrollView>
@@ -181,7 +182,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/register_department"
+        app:layout_constraintTop_toBottomOf="@+id/departmentSpinner"
         app:layout_constraintVertical_bias="0.0"
         tools:ignore="NotSibling" />
 
