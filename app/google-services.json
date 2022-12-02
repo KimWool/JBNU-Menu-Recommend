@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "927437912702",
+    "project_id": "jbnu-menu-recommend",
+    "storage_bucket": "jbnu-menu-recommend.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:927437912702:android:4ee51bafe4e79988b9762f",
+        "android_client_info": {
+          "package_name": "com.sogong.jbnu_menu_recommend"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "927437912702-04sgghsq0geb87f7rjosker1aokjtnnb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDZEP323nlGsVIhKPgoohFzsQQVI9fki_g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "927437912702-04sgghsq0geb87f7rjosker1aokjtnnb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
