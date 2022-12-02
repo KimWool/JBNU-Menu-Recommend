@@ -7,43 +7,15 @@
     tools:context=".SplashActivity">
 
     <ImageView
-        android:id="@+id/splash_logo"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_marginBottom="165dp"
-        android:contentDescription="TODO"
+        android:id="@+id/imageView2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/application_icon"
-        tools:ignore="ContentDescription,HardcodedText" />
-
-    <TextView
-        android:id="@+id/Main_Title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:text="전메추"
-        android:textColor="@color/purple_500"
-        android:textSize="40sp"
-        app:layout_constraintBottom_toTopOf="@+id/Sub_Title"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/splash_logo" />
-
-    <TextView
-        android:id="@+id/Sub_Title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="160dp"
-        android:text="전북대생을 위한 메뉴추천"
-        android:textColor="@color/gray_500"
-        android:textSize="17sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:srcCompat="@drawable/splash_screen"
+        android:contentDescription="TODO"
+        tools:ignore="ContentDescription" />
 </androidx.constraintlayout.widget.ConstraintLayout>

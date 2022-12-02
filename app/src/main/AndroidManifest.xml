@@ -10,6 +10,7 @@
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
         android:label="전메추"
+        android:screenOrientation="portrait"
         android:roundIcon="@mipmap/icon_design"
         android:supportsRtl="true"
         android:theme="@style/Theme.JBNUMenuRecommend"
