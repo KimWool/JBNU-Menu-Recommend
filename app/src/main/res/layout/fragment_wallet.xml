@@ -1,17 +1,95 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
 
+
     <TextView
+        android:id="@+id/pay"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="밥값내기"
+        android:layout_marginBottom="4dp"
+        android:text="1/N"
+        app:layout_constraintBottom_toTopOf="@+id/Nbutton"
+        app:layout_constraintStart_toStartOf="@+id/Nbutton" />
+
+    <Button
+        android:id="@+id/Lbutton"
+        android:layout_width="300dp"
+        android:layout_height="80dp"
+        android:text="룰렛 돌리기"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        app:backgroundTint="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="@+id/Sbutton"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/Sbutton"
+        app:layout_constraintTop_toBottomOf="@+id/pay2"
+        app:strokeColor="#56296E"
+        app:strokeWidth="1sp" />
+
+    <Button
+        android:id="@+id/Sbutton"
+        android:layout_width="300dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:text="사다리 타기"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        app:backgroundTint="#FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/Dbutton"
+        app:layout_constraintEnd_toEndOf="@+id/Dbutton"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/Dbutton"
+        app:layout_constraintTop_toBottomOf="@+id/Lbutton"
+        app:layout_constraintVertical_bias="0.0"
+        app:strokeColor="#56296E"
+        app:strokeWidth="1sp" />
+
+    <Button
+        android:id="@+id/Dbutton"
+        android:layout_width="300dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="55dp"
+        android:layout_marginEnd="55dp"
+        android:layout_marginBottom="152dp"
+        android:text="제비 뽑기"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        app:backgroundTint="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"   />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:strokeColor="#56296E"
+        app:strokeWidth="1sp" />
+
+    <Button
+        android:id="@+id/Nbutton"
+        android:layout_width="300dp"
+        android:layout_height="80dp"
+        android:text="1/N 계산하기"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        app:backgroundTint="#FFFFFF"
+        app:layout_constraintStart_toStartOf="@+id/pay2"
+        app:layout_constraintTop_toBottomOf="@+id/pay"
+        app:strokeColor="#56296E"
+        app:strokeWidth="1sp" />
+
+    <TextView
+        android:id="@+id/pay2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="밥값내기"
+        app:layout_constraintBottom_toTopOf="@+id/Lbutton"
+        app:layout_constraintStart_toStartOf="@+id/Lbutton"
+        app:layout_constraintTop_toBottomOf="@+id/Nbutton"
+        app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

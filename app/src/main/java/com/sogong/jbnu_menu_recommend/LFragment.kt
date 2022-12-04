@@ -6,7 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.sogong.jbnu_menu_recommend.databinding.FragmentWalletBinding
+import com.sogong.jbnu_menu_recommend.databinding.FragmentLBinding
 
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
 private const val ARG_PARAM1 = "param1"
@@ -14,32 +14,14 @@ private const val ARG_PARAM2 = "param2"
 
 /**
  * A simple [Fragment] subclass.
- * Use the [Wallet.newInstance] factory method to
+ * Use the [LFragment.newInstance] factory method to
  * create an instance of this fragment.
  */
-class Wallet : Fragment() {
-    var mainActivity: MainActivity? = null
+//fragment 화면 전환: walletFragment -> LFragment(룰렛 돌리기 화면)
+class LFragment : Fragment() {
+    lateinit var mainActivity: MainActivity
     private var param1: String? = null
     private var param2: String? = null
-
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        // return inflater.inflate(R.layout.fragment_wallet, container, false)
-        val binding = FragmentWalletBinding.inflate(inflater, container, false)
-        binding.Nbutton.setOnClickListener {mainActivity?.goN()}
-        binding.Lbutton.setOnClickListener {mainActivity?.goL()}
-        binding.Sbutton.setOnClickListener {mainActivity?.goS()}
-        binding.Dbutton.setOnClickListener {mainActivity?.goD()}
-        return binding.root
-    }
-
-    override fun onAttach(context: Context) {
-        super.onAttach(context)
-        if (context is MainActivity) mainActivity = context
-    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -48,7 +30,22 @@ class Wallet : Fragment() {
             param2 = it.getString(ARG_PARAM2)
         }
     }
+//LFragment.kt의 버튼을 클릭했을 때 WalletFragment.kt로 돌아감
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        val binding = FragmentLBinding.inflate(inflater, container, false)
+        binding.Back.setOnClickListener{mainActivity.goBack()}
+        return binding.root
+        // Inflate the layout for this fragment
+        //return inflater.inflate(R.layout.fragment_l, container, false)
+    }
 
+    override fun onAttach(context: Context) {
+        super.onAttach(context)
+        mainActivity = context as MainActivity
+    }
 
     companion object {
         /**
@@ -57,12 +54,11 @@ class Wallet : Fragment() {
          *
          * @param param1 Parameter 1.
          * @param param2 Parameter 2.
-         * @return A new instance of fragment Wallet.
+         * @return A new instance of fragment LFragment.
          */
-        // TODO: Rename and change types and number of parameters
         @JvmStatic
         fun newInstance(param1: String, param2: String) =
-            Wallet().apply {
+            LFragment().apply {
                 arguments = Bundle().apply {
                     putString(ARG_PARAM1, param1)
                     putString(ARG_PARAM2, param2)

@@ -41,4 +41,39 @@ class MainActivity : AppCompatActivity() {
             selectedItemId = R.id.aciton_home
         }
     }
+    fun goN() { //Wallet Fragment의 Nbutton을 클릭 시 호출되는 메서드
+        val nFragment = NFragment()
+        val transaction = supportFragmentManager.beginTransaction()
+        transaction.add(R.id.frameLayout, nFragment)
+        transaction.addToBackStack("n")
+        transaction.commit()
+    }
+
+    fun goL() { //Wallet Fragment의 Lbutton을 클릭 시 호출되는 메서드
+        val lFragment = LFragment()
+        val transaction = supportFragmentManager.beginTransaction()
+        transaction.add(R.id.frameLayout, lFragment)
+        transaction.addToBackStack("l")
+        transaction.commit()
+    }
+
+    fun goS() { //Wallet Fragment의 Sbutton을 클릭 시 호출되는 메서드
+        val sFragment = SFragment()
+        val transaction = supportFragmentManager.beginTransaction()
+        transaction.add(R.id.frameLayout, sFragment)
+        transaction.addToBackStack("s")
+        transaction.commit()
+    }
+
+    fun goD() { //Wallet Fragment의 Dbutton을 클릭 시 호출되는 메서드
+        val dFragment = DFragment()
+        val transaction = supportFragmentManager.beginTransaction()
+        transaction.add(R.id.frameLayout, dFragment)
+        transaction.addToBackStack("d")
+        transaction.commit()
+    }
+
+    fun goBack(){ //Back 버튼 클릭 시 호출되는 메서드
+        onBackPressed()
+    }
 }
