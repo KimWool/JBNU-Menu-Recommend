@@ -38,6 +38,8 @@ class NFragment : Fragment() {
     ): View? {
         val binding = FragmentNBinding.inflate(inflater, container, false)
         binding.Back.setOnClickListener{mainActivity.goBack()}
+        binding.dividebtn.setOnClickListener {
+        }
         return binding.root
         // Inflate the layout for this fragment
         //return inflater.inflate(R.layout.fragment_n, container, false)
