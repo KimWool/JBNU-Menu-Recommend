@@ -5,4 +5,6 @@ data class User(
     var name: String,
     var department: String,
     var uId: String
-)
+){
+    constructor(): this("", "", "", "")
+}
