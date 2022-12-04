@@ -74,7 +74,6 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="-10dp"
         android:layout_marginEnd="160dp"
-        android:layout_marginRight="160dp"
         android:text="아이디 저장"
         android:textColor="#A2A1A0"
         android:textSize="13sp"

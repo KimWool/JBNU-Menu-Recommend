@@ -40,12 +40,12 @@ class RegisterActivity : AppCompatActivity() {
             val name = binding.registerName.text.toString().trim()
             val department = binding.departmentSpinner.selectedItem.toString().trim()
 
-            signUp(email, password, name, department)
-
             if(confirmPassword != password){
                 Toast.makeText(this, "비밀번호가 다릅니다.\n다시 시도해 주세요.", Toast.LENGTH_SHORT).show()
                 finish()
             }
+
+            signUp(email, password, name, department)
         }
 
         val data = listOf("- 선택하세요 -", "간호대학", "공과대학", "글로벌융합대학", "농업생명과학대학", "사범대학", "사회과학대학", "상과대학", "생활과학대학", "수의과대학", "스마트팜학과", "약학대학", "예술대학", "의과대학", "인문대학", "자연과학대학", "치과대학", "환경생명자원대학")
