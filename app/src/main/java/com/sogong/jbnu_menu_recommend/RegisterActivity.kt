@@ -4,8 +4,6 @@ package com.sogong.jbnu_menu_recommend
 import android.R
 import android.content.Intent
 import android.os.Bundle
-import android.text.Editable
-import android.text.TextWatcher
 import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
@@ -38,10 +36,16 @@ class RegisterActivity : AppCompatActivity() {
         binding.registerButton.setOnClickListener {
             val email = binding.registerId.text.toString().trim()
             val password = binding.registerPassword.text.toString().trim()
+            val confirmPassword = binding.registerPasswordCheck.text.toString().trim()
             val name = binding.registerName.text.toString().trim()
             val department = binding.departmentSpinner.selectedItem.toString().trim()
 
             signUp(email, password, name, department)
+
+            if(confirmPassword != password){
+                Toast.makeText(this, "비밀번호가 다릅니다.\n다시 시도해 주세요.", Toast.LENGTH_SHORT).show()
+                finish()
+            }
         }
 
         val data = listOf("- 선택하세요 -", "간호대학", "공과대학", "글로벌융합대학", "농업생명과학대학", "사범대학", "사회과학대학", "상과대학", "생활과학대학", "수의과대학", "스마트팜학과", "약학대학", "예술대학", "의과대학", "인문대학", "자연과학대학", "치과대학", "환경생명자원대학")
@@ -65,7 +69,8 @@ class RegisterActivity : AppCompatActivity() {
                     val intent: Intent = Intent(this@RegisterActivity, LogInActivity::class.java)
                     startActivity(intent)
                     addUserToDatabase(email, name, department, mAuth.currentUser?.uid!!)
-                } else {
+                }
+                else {
                     Toast.makeText(this, "회원가입에 실패하였습니다.\n다시 한번 확인해 주세요.", Toast.LENGTH_SHORT).show()
                 }
             }
@@ -74,34 +79,4 @@ class RegisterActivity : AppCompatActivity() {
     private fun addUserToDatabase(email: String, name: String, department: String, uId: String){
         mDbRef.child("user").child(uId).setValue(User(email, name, department, uId))
     }
-
-    /**
-    private fun RegisterTextWatcher(){
-        register_password_check.addTextChangedListener(object : TextWatcher){
-            override fun afterTextChanged(p0: Editable?){
-                if(register_password.getText().toString().equals(register_password_check.getText().toString())){
-                    pw_confirm.setText("비밀번호가 일치합니다.")
-                    register_button.isEnabled=true
-                }
-                else{
-                    pw_confirm.setText("비밀번호가 일치하지 않습니다.")
-                    register_button.isEnabled=false
-                }
-            }
-
-            override fun beforeTextChanged(p0: CharSequence?, p:1 Int, p2: Int, p3: Int){}
-
-            override fun onTextChanged(p0: CharSequence?, p:1 Int, p2: Int, p3: Int){
-                if(register_password.getText().toString().equals(register_password_check.getText().toString())){
-                    pw_confirm.setText("비밀번호가 일치합니다.")
-                    register_button.isEnabled=true
-                }
-                else{
-                    pw_confirm.setText("비밀번호가 일치하지 않습니다.")
-                    register_button.isEnabled=false
-                }
-            }
-        }
-    }
-    **/
 }
