@@ -1,8 +1,11 @@
 package com.sogong.jbnu_menu_recommend
 
 import android.content.Intent
+import android.content.SharedPreferences
+import android.content.SharedPreferences.Editor
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.preference.PreferenceManager
 import android.util.Log
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
@@ -13,7 +16,6 @@ import com.sogong.jbnu_menu_recommend.databinding.ActivityLogInBinding
 class LogInActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityLogInBinding
-
     private lateinit var mAuth: FirebaseAuth
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -46,7 +48,7 @@ class LogInActivity : AppCompatActivity() {
                     Toast.makeText(this, "환영합니다!", Toast.LENGTH_SHORT).show()
                     finish()
                 } else {
-                    Toast.makeText(this, "로그인에 실패하였습니다.\n다시 시도해 주세요.", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, "로그인 정보가 올바르지 않습니다.", Toast.LENGTH_SHORT).show()
                     Log.d("Login", "Error: ${task.exception}")
                 }
             }
