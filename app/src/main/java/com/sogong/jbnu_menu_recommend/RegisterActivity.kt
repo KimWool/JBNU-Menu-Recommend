@@ -4,6 +4,8 @@ package com.sogong.jbnu_menu_recommend
 import android.R
 import android.content.Intent
 import android.os.Bundle
+import android.text.Editable
+import android.text.TextWatcher
 import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
@@ -30,7 +32,6 @@ class RegisterActivity : AppCompatActivity() {
         binding.registerButton.setOnClickListener {
             val email = binding.registerId.text.toString().trim()
             val password = binding.registerPassword.text.toString().trim()
-            //비밀번호 재확인, 이름 입력 부분 추가
 
             signUp(email, password)
         }
@@ -52,7 +53,7 @@ class RegisterActivity : AppCompatActivity() {
         mAuth.createUserWithEmailAndPassword(email, password)
             .addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
-                    Toast.makeText(this, "환영합니다!", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, "회원가입에 성공하였습니다.\n로그인 화면으로 이동합니다.", Toast.LENGTH_SHORT).show()
                     val intent: Intent = Intent(this@RegisterActivity, LogInActivity::class.java)
                     startActivity(intent)
                 } else {
@@ -60,4 +61,34 @@ class RegisterActivity : AppCompatActivity() {
                 }
             }
     }
+
+    /**
+    private fun RegisterTextWatcher(){
+        register_password_check.addTextChangedListener(object : TextWatcher){
+            override fun afterTextChanged(p0: Editable?){
+                if(register_password.getText().toString().equals(register_password_check.getText().toString())){
+                    pw_confirm.setText("비밀번호가 일치합니다.")
+                    register_button.isEnabled=true
+                }
+                else{
+                    pw_confirm.setText("비밀번호가 일치하지 않습니다.")
+                    register_button.isEnabled=false
+                }
+            }
+
+            override fun beforeTextChanged(p0: CharSequence?, p:1 Int, p2: Int, p3: Int){}
+
+            override fun onTextChanged(p0: CharSequence?, p:1 Int, p2: Int, p3: Int){
+                if(register_password.getText().toString().equals(register_password_check.getText().toString())){
+                    pw_confirm.setText("비밀번호가 일치합니다.")
+                    register_button.isEnabled=true
+                }
+                else{
+                    pw_confirm.setText("비밀번호가 일치하지 않습니다.")
+                    register_button.isEnabled=false
+                }
+            }
+        }
+    }
+    **/
 }
