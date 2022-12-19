@@ -1,17 +1,167 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/PersoInfo"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
+
+    <Button
+        android:id="@+id/button4"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="403dp"
+        android:layout_height="67dp"
+        android:gravity="center_vertical"
+        android:text="메뉴 필터 설정"
+        android:textColor="#000000"
+        android:textSize="20dp"
+        app:backgroundTint="#FFFFFF"
+        tools:layout_editor_absoluteX="5dp"
+        tools:layout_editor_absoluteY="677dp" />
+
+    <View
+        android:id="@+id/divider2"
+        android:layout_width="wrap_content"
+        android:layout_height="2dp"
+        android:background="#A6A6A4"
+        tools:layout_editor_absoluteX="-5dp"
+        tools:layout_editor_absoluteY="640dp" />
+
+    <Button
+        android:id="@+id/button3"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="403dp"
+        android:layout_height="67dp"
+        android:gravity="center_vertical"
+        android:text="찜한 식당/메뉴"
+        android:textColor="#000000"
+        android:textSize="20dp"
+        app:backgroundTint="#FFFFFF"
+        tools:layout_editor_absoluteX="5dp"
+        tools:layout_editor_absoluteY="575dp" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="403dp"
+        android:layout_height="67dp"
+        android:gravity="center_vertical"
+        android:text="방문 식당 목록"
+        android:textColor="#000000"
+        android:textSize="20dp"
+        app:backgroundTint="#FFFFFF"
+        tools:layout_editor_absoluteX="5dp"
+        tools:layout_editor_absoluteY="440dp"
+        style="?android:attr/borderlessButtonStyle" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="403dp"
+        android:layout_height="67dp"
+        android:gravity="center_vertical"
+        android:text="작성한 리뷰"
+        android:textColor="#000000"
+        android:textSize="20dp"
+        app:backgroundTint="#FFFFFF"
+        tools:layout_editor_absoluteX="4dp"
+        tools:layout_editor_absoluteY="507dp"
+        style="?android:attr/borderlessButtonStyle" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="설정"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.041"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"   />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.952" />
+
+    <FrameLayout
+        android:layout_width="401dp"
+        android:layout_height="125dp"
+        tools:layout_editor_absoluteX="5dp"
+        tools:layout_editor_absoluteY="102dp"
+        >
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="75dp"
+            android:layout_height="76dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            tools:ignore="MissingClass"
+            tools:srcCompat="@drawable/ic_baseline_person_24" />
+
+        <View
+            android:id="@+id/view4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            //android:background="@drawable/stroke"
+            />
+    </FrameLayout>
+
+    <Button
+        android:layout_width="403dp"
+        android:layout_height="67dp"
+        android:gravity="center_vertical"
+        android:text="공지사항"
+        android:textColor="#000000"
+        android:textSize="20dp"
+        app:backgroundTint="#FFFFFF"
+        tools:layout_editor_absoluteX="5dp"
+        tools:layout_editor_absoluteY="277dp"
+        style="?android:attr/borderlessButtonStyle" />
+
+    <Button
+        android:layout_width="403dp"
+        android:layout_height="67dp"
+        android:gravity="center_vertical"
+        android:text="앱 문의/건의"
+        android:textColor="#000000"
+        android:textSize="20dp"
+        app:backgroundTint="#FFFFFF"
+        tools:layout_editor_absoluteX="4dp"
+        tools:layout_editor_absoluteY="344dp"
+        style="?android:attr/borderlessButtonStyle" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="고객센터"
+        android:textColor="@color/gray_500"
+        android:textSize="15dp"
+        android:gravity="left"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="257dp" />
+
+    <View
+        android:id="@+id/view5"
+        android:layout_width="421dp"
+        android:layout_height="69dp"
+        android:background="@color/purple_500"
+        tools:layout_editor_absoluteX="-4dp"
+        tools:layout_editor_absoluteY="-1dp"
+        tools:visibility="visible" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:text="내역"
+        android:textColor="@color/gray_500"
+        android:textSize="15dp"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="420dp" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="wrap_content"
+        android:layout_height="2dp"
+        android:background="#A6A6A4"
+        tools:layout_editor_absoluteX="2dp"
+        tools:layout_editor_absoluteY="410dp" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
